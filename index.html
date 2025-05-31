@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Drinking</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script>
+            faktor = 100
+            liter = 0
+            procent = 0
+
+            function update(id,by){
+                if (id == 'liter'){
+                    liter += by;
+                    var x = liter;
+                }
+                if (id == 'procent'){
+                    procent += by;
+                    var x = procent;
+                }
+                if (id == 'faktor'){
+                    faktor += by
+                    var x = faktor;
+                }
+                document.getElementById(id).innerHTML = (x/100).toFixed(2);
+                genstande(liter,procent)
+            }
+            function genstande(liter,procent){
+                document.getElementById('genstande').innerHTML = (liter * procent * 789 / 10000000).toFixed(2)
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <span>Faktor:</span>
+            <span id="faktor">1.00</span>
+
+            <br>
+            <button type="'button" onclick="update('faktor',5)">↑</button>
+            <button type="'button" onclick="update('faktor',-5)">↓</button>
+        </div>
+
+        <center>
+            <div>
+                <span>Liter:</span>
+                <span id='liter'>0.00</span>
+
+                <br>
+                <button type="'button" onclick="update('liter',faktor)">↑</button>
+                <button type="'button" onclick="update('liter',0-faktor)">↓</button>
+            </div>
+
+            <br>
+
+            <div>
+                <span>Procent:</span>
+                <span id='procent'>0.00</span>
+                <span>%</span>
+
+                <br>
+                <button type="'button" onclick="update('procent',faktor)">↑</button>
+                <button type="'button" onclick="update('procent',0-faktor)">↓</button>
+            </div>
+            
+            <br>
+
+            <div>
+                <span>Genstande: </span>
+                <h2 id="genstande">0.00</h2>
+            </div>
+        </center>
+    </body>
+
+</html>
