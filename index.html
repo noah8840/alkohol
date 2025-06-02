@@ -11,21 +11,21 @@
             function update(id,by){
                 if (id == 'liter'){
                     liter += by;
-                    var x = liter;
+                    x = liter;
                 }
                 if (id == 'procent'){
                     procent += by;
-                    var x = procent;
+                    x = procent;
                 }
                 if (id == 'faktor'){
                     faktor += by
-                    var x = faktor;
+                    x = faktor;
                 }
                 document.getElementById(id).innerHTML = (x/100).toFixed(2);
                 genstande(liter,procent)
             }
             function genstande(liter,procent){
-                document.getElementById('genstande').innerHTML = (liter * procent * 789 / 10000000).toFixed(2)
+                document.getElementById('genstande').innerHTML = (liter * procent * 664540138224348750664540138224 / 100000000000000000000000000000000000).toFixed(2)
             }
         </script>
     </head>
@@ -42,8 +42,8 @@
 
         <center>
             <div>
-                <span>Liter:</span>
                 <span id='liter'>0.00</span>
+                <span>dl</span>
 
                 <br>
                 <button type="'button" onclick="update('liter',faktor)">↑</button>
@@ -53,7 +53,6 @@
             <br>
 
             <div>
-                <span>Procent:</span>
                 <span id='procent'>0.00</span>
                 <span>%</span>
 
