@@ -4,7 +4,7 @@ body {
     background-size: 100% auto; 
     background-color: burlywood;
     font-family: arial;
-    font-size: 200%;
+    font-size: 400%;
     color: white;
 }
 h1 {
@@ -16,7 +16,30 @@ h2 {
     margin: 0px;
 }
 button {
-    width: 9%;
     aspect-ratio: 1 / 1;
-    font-size: 80%;
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+}
+
+#big {
+    width: 15%;
+    font-size: 75%;
+}
+
+#mid {
+    width: 10%;
+    font-size: 45%;
+}
+
+#small {
+    width: 5%;
+    font-size: 15%;
+}
+
+#button-row {
+    display: flex;
+    gap: 0px;
+    margin: 0px 0px;
+    justify-content: center;
 }

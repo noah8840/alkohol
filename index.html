@@ -25,19 +25,14 @@
                 genstande(liter,procent)
             }
             function genstande(liter,procent){
-                document.getElementById('genstande').innerHTML = (liter * procent * 65876152832674571805006587615283 / 10000000000000000000000000000000000000).toFixed(2)
+                document.getElementById('genstande').innerHTML = (liter * procent * 65876152832674571805006587615283 / 1e37).toFixed(2)
             }
         </script>
     </head>
 
     <body>
         <div>
-            <span>Faktor:</span>
-            <span id="faktor">1.00</span>
-
             <br>
-            <button type="'button" onclick="update('faktor',5)">↑</button>
-            <button type="'button" onclick="update('faktor',-5)">↓</button>
         </div>
 
         <center>
@@ -45,9 +40,18 @@
                 <span id='liter'>0.00</span>
                 <span>dl</span>
 
-                <br>
-                <button type="'button" onclick="update('liter',faktor)">↑</button>
-                <button type="'button" onclick="update('liter',0-faktor)">↓</button>
+                <div id="button-row">
+                    <button id="big" type="button" onclick="update('liter',100)">+1</button>
+                    <button id="big" type="button" onclick="update('liter',-100)">-1</button>
+                </div>
+                <div id="button-row">
+                    <button id="mid" type="button" onclick="update('liter',10)">+0.1</button>
+                    <button id="mid" type="button" onclick="update('liter',-10)">-0.1</button>
+                </div>
+                <div id="button-row">
+                    <button id="small" type="button" onclick="update('liter',1)">+0.01</button>
+                    <button id="small" type="button" onclick="update('liter',-1)">-0.01</button>
+                </div>
             </div>
 
             <br>
@@ -56,9 +60,18 @@
                 <span id='procent'>0.00</span>
                 <span>%</span>
 
-                <br>
-                <button type="'button" onclick="update('procent',faktor)">↑</button>
-                <button type="'button" onclick="update('procent',0-faktor)">↓</button>
+                <div id="button-row">
+                    <button id="big" type="button" onclick="update('procent',100)">+1</button>
+                    <button id="big" type="button" onclick="update('procent',-100)">-1</button>
+                </div>
+                <div id="button-row">
+                    <button id="mid" type="button" onclick="update('procent',10)">+0.1</button>
+                    <button id="mid" type="button" onclick="update('procent',-10)">-0.1</button>
+                </div>
+                <div id="button-row">
+                    <button id="small" type="button" onclick="update('procent',1)">+0.01</button>
+                    <button id="small" type="button" onclick="update('procent',-1)">-0.01</button>
+                </div>
             </div>
             
             <br>
